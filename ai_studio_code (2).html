@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPG to PDF Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JPG to PDF Converter</h1>
+        <p>Select one or more JPG images to convert them into a single PDF document.</p>
+
+        <input type="file" id="jpgInput" accept=".jpg, .jpeg" multiple>
+        <button id="convertBtn" disabled>Convert to PDF</button>
+
+        <div id="message" class="hidden"></div>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Converting... Please wait.</p>
+        </div>
+
+        <a id="downloadLink" class="hidden" download="converted.pdf">Download PDF</a>
+    </div>
+
+    <!-- Include pdf-lib from a CDN -->
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
